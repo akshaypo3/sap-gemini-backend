@@ -1,5 +1,5 @@
 apiVersion: ai.sap.com/v1beta1
-kind: Executable
+kind: Pipeline
 metadata:
   name: genai-flash
 spec:
