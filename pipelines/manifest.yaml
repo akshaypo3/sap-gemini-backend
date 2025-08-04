@@ -1,27 +1,17 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: Executable
 metadata:
-  name: gemini-2.0-flash
+  name: gemini-flash
 spec:
   inputs:
     parameters:
       - name: prompt
         type: string
   outputs:
-    - name: response
+    results:
+      type: string
   template:
     containers:
       - image: docker.io/akshay1p1/gemini-backend:latest
         command: ["python", "src/handler.py"]
-        args: ["--prompt", "{{prompt}}"]
-        env:
-          - name: LLM_ENDPOINT
-            valueFrom:
-              secretKeyRef:
-                name: gemini-secrets
-                key: endpoint
-          - name: LLM_AUTH_TOKEN
-            valueFrom:
-              secretKeyRef:
-                name: gemini-secrets
-                key: token
+        args: ["--prompt", "{{inputs.parameters.prompt}}"]
