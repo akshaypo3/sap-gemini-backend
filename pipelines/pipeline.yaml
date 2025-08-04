@@ -11,6 +11,7 @@ spec:
     - name: response
   template:
     containers:
-      - image: <your-docker-image-url>
+      - image: docker.io/akshay1p1/gemini-backend:latest
+
         command: ["python", "src/handler.py"]
         args: ["--prompt", "{{prompt}}"]
