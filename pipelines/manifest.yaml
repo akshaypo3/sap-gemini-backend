@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1beta1
 kind: Executable
 metadata:
-  name: gemini-flash
+  name: genai-flash
 spec:
   inputs:
     parameters:
@@ -15,10 +15,10 @@ spec:
       - name: LLM_ENDPOINT
         valueFrom:
           secretKeyRef:
-            name: gemini-secrets
+            name: genai-secret
             key: endpoint
       - name: LLM_AUTH_TOKEN
         valueFrom:
           secretKeyRef:
-            name: gemini-secrets
+            name: genai-secret
             key: token
