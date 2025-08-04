@@ -1,21 +1,16 @@
 apiVersion: ai.sap.com/v1alpha1
-kind: Configuration
+kind: Executable  # ✅ This is the key
 metadata:
-  name: gemini-inference-pipeline
+  name: gemini-2.0-flash  # ✅ This MUST match what you want to select
 spec:
-  arguments:
+  inputs:
     parameters:
       - name: prompt
         type: string
-        default: "Give me an example of a sustainability report summary"
-  inputs: []
   outputs:
     - name: response
-  steps:
-    - name: call-gemini
-      image: <your-docker-image-url>  # You'll build and push this next
-      args:
-        - "--prompt"
-        - "{{prompt}}"
-      outputs:
-        - name: response
+  template:
+    containers:
+      - image: <your-docker-image-url>
+        command: ["python", "src/handler.py"]
+        args: ["--prompt", "{{prompt}}"]
