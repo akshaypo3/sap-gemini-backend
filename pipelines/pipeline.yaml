@@ -1,0 +1,21 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Configuration
+metadata:
+  name: gemini-inference-pipeline
+spec:
+  arguments:
+    parameters:
+      - name: prompt
+        type: string
+        default: "Give me an example of a sustainability report summary"
+  inputs: []
+  outputs:
+    - name: response
+  steps:
+    - name: call-gemini
+      image: <your-docker-image-url>  # You'll build and push this next
+      args:
+        - "--prompt"
+        - "{{prompt}}"
+      outputs:
+        - name: response
