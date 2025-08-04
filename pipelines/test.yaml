@@ -1,7 +1,0 @@
-apiVersion: ai.sap.com/v1beta1
-kind: Executable
-metadata:
-  name: test-executable
-spec:
-  executable:
-    image: docker.io/nginx:latest  # Test with a known public image

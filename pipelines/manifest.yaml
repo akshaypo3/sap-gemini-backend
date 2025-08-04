@@ -1,15 +1,8 @@
-apiVersion: ai.sap.com/v1beta1  # Changed from v1alpha1
+apiVersion: ai.sap.com/v1beta1
 kind: Executable
 metadata:
   name: gemini-flash
 spec:
-  executable:  # THIS IS NEW AND CRITICAL
-    image: docker.io/akshay1p1/gemini-backend:4b2af2a4537f8418b01a8345c56861aae9c8c1e2
+  executable:
+    image: docker.io/akshay1p1/gemini-backend:latest  # Using latest for simplicity
     command: ["python", "src/handler.py"]
-  inputs:
-    parameters:
-      - name: prompt
-        type: string
-  outputs:
-    results:
-      type: string
