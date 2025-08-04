@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: Executable
 metadata:
-  name: gemini-flash
+  name: gemini-flash  
 spec:
   inputs:
     parameters:
@@ -12,6 +12,6 @@ spec:
       type: string
   template:
     containers:
-      - image: docker.io/akshay1p1/gemini-backend:4b2af2a4537f8418b01a8345c56861aae9c8c1e2
+      - image: index.docker.io/akshay1p1/gemini-backend:4b2af2a4537f8418b01a8345c56861aae9c8c1e2
         command: ["python", "src/handler.py"]
         args: ["--prompt", "{{inputs.parameters.prompt}}"]
