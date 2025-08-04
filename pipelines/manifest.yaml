@@ -12,6 +12,6 @@ spec:
       type: string
   template:
     containers:
-      - image: docker.io/akshay1p1/gemini-backend:latest
+      - image: docker.io/akshay1p1/gemini-backend:f22e606158e0dfb497289e2f26449f0b4d1f22bf
         command: ["python", "src/handler.py"]
         args: ["--prompt", "{{inputs.parameters.prompt}}"]
