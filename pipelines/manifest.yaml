@@ -1,16 +1,11 @@
 apiVersion: ai.sap.com/v1beta1
-kind: Pipeline
+kind: Executable
 metadata:
-  name: genai-flash
+  name: gemini-flash
 spec:
-  inputs:
-    parameters:
-      - name: prompt
-        type: string
   executable:
     image: docker.io/akshay1p1/gemini-backend:latest
     command: ["python", "src/handler.py"]
-    args: ["--prompt", "{{inputs.parameters.prompt}}"]
     env:
       - name: LLM_ENDPOINT
         valueFrom:
