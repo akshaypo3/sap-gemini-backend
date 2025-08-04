@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
-kind: Executable  # ✅ This is the key
+kind: Executable
 metadata:
-  name: gemini-2.0-flash  # ✅ This MUST match what you want to select
+  name: gemini-2.0-flash
 spec:
   inputs:
     parameters:
@@ -12,6 +12,5 @@ spec:
   template:
     containers:
       - image: docker.io/akshay1p1/gemini-backend:latest
-
         command: ["python", "src/handler.py"]
         args: ["--prompt", "{{prompt}}"]
