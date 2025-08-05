@@ -6,4 +6,6 @@ spec:
   applicationName: gemini-llm
   executions:
     - name: gen-execution
-      executionTemplate: huggingface-text-gen
+      executionTemplate:
+        name: huggingface-text-gen
+        version: "1.0.0"

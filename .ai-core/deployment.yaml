@@ -6,4 +6,4 @@ spec:
   scenarioName: gemini-scenario
   executionName: gen-execution
   deploymentConfiguration:
-    instanceType: Standard
+    instanceType: standard
