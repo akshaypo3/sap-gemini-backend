@@ -1,14 +1,11 @@
-# sap-gemini-backend/.ai-core/executable.yaml (final version)
+
 apiVersion: ai.sap.com/v1alpha1
 kind: Executable
 metadata:
   name: gemini-backend-executable
   scenarioName: gemini-scenario
 spec:
-  image: "docker.io/akshay1p1/gemini-backend:latest" # <-- Updated with your Docker Hub image
-  predictor:
-    args:
-      - "--model_name=claude-llm"
+  image: "docker.io/akshay1p1/gemini-backend:latest"
   ports:
     - name: http1
       containerPort: 8080

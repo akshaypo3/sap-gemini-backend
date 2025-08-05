@@ -1,9 +1,5 @@
-# File: sap-gemini-backend/.ai-core/scenario.yaml
-#
-# Defines the scenario for your project. Think of this as the project name
-# that groups all related executables and deployments.
 
 apiVersion: ai.sap.com/v1alpha1
 kind: Scenario
 metadata:
-  name: gemini-scenario # The name of your scenario.
+  name: gemini-scenario
