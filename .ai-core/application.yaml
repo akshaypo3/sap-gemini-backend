@@ -6,9 +6,8 @@ spec:
   services:
     - name: llm-service
       template:
-        name: huggingface-text-gen
+        name: foundation-model-v1
         version: "1.0.0"
       inputs:
-        image: ghcr.io/sap-samples/huggingface-text-gen:latest
         parameters:
-          model_id: google/flan-t5-base
+          modelName: google/flan-t5-base

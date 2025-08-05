@@ -7,5 +7,5 @@ spec:
   executions:
     - name: gen-execution
       executionTemplate:
-        name: huggingface-text-gen
+        name: foundation-model-v1
         version: "1.0.0"
