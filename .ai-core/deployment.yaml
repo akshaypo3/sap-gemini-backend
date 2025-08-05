@@ -4,5 +4,5 @@ metadata:
   name: gemini-deployment
 spec:
   scenarioName: gemini-scenario
-  applicationName: geminii
+  applicationName: geminiii
   inputs: []
