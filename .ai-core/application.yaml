@@ -1,2 +1,2 @@
-name: sap-genai-app
-description: "Application for SAP Generative AI Deployment"
+name: sap-gemini-backend
+description: "SAP Generative AI App using Joule model"
