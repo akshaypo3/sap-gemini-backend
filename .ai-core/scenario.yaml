@@ -4,4 +4,4 @@ metadata:
   name: gemini-scenario
 spec:
   inputs: []
-  applicationName: gemini-llm
+  applicationName: geminii
