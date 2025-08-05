@@ -1,0 +1,11 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Scenario
+metadata:
+  name: gemini-scenario
+spec:
+  applicationName: gemini-llm
+  executions:
+    - name: gen-execution
+      executionTemplate:
+        name: huggingface-text-gen
+        version: "1.0.0"
