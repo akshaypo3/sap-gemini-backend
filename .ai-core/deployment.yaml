@@ -4,6 +4,5 @@ metadata:
   name: gemini-deployment
 spec:
   scenarioName: gemini-scenario
-  executionName: gen-execution
-  deploymentConfiguration:
-    instanceType: standard
+  applicationName: gemini-llm
+  inputs: []
