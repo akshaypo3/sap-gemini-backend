@@ -1,9 +1,10 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: Deployment
 metadata:
-  name: gemini-deployment
+  name: gemini-deployment   # MUST NOT be empty
 spec:
-  scenarioName: gemini-scenario
-  applicationName: gemini-llm
-  inputs:
-    parameters: {}
+  scenario: gemini-scenario
+  application: gemini-llm
+  runtime:
+    name: cloudfoundry
+    version: 1.0.0
