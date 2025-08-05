@@ -1,3 +1,5 @@
 name: joule
 scenario: genai-scenario
-model: joule
+description: "Deployment for SAP Joule Model"
+inference:
+  model: joule
