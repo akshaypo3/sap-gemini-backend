@@ -1,8 +1,16 @@
+# File: sap-gemini-backend/.ai-core/deployment.yaml
+#
+# Defines a deployment to run your executable as a service.
+
 apiVersion: ai.sap.com/v1alpha1
 kind: Deployment
 metadata:
-  name: gemini-deployment
+  name: gemini-deployment # A name for this specific deployment.
+  scenarioName: gemini-scenario # Links this deployment to your scenario.
 spec:
-  scenarioName: gemini-scenario
-  applicationName: geminiii
-  inputs: []
+  # This field links to the executable we defined above.
+  executableId: gemini-backend-executable
+  instanceCount: 1
+  scheduler:
+    minReplicas: 0 # Scales down to save resources when not in use.
+    maxReplicas: 1 # Scales up to handle one request at a time.

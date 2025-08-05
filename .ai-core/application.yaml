@@ -1,8 +1,0 @@
-apiVersion: ai.sap.com/v1alpha1
-kind: Application
-metadata:
-  name: geminiii
-spec:
-  template:
-    name: echo-model
-    version: "1.0.0"
