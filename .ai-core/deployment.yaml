@@ -1,6 +1,3 @@
 name: joule
 scenario: genai-scenario
-deploymentConfiguration:
-  model: joule
-  runtime: ai-core-runtime
-  resourcePlan: starter
+model: joule
