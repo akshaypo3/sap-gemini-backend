@@ -1,7 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: Application
 metadata:
-  name: gemini-llm   # MUST NOT be empty
+  name: gemini-llm
 spec:
   template:
     name: foundation-model

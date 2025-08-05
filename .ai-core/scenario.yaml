@@ -1,6 +1,7 @@
 apiVersion: ai.sap.com/v1alpha1
 kind: Scenario
 metadata:
-  name: gemini-scenario   # MUST NOT be empty
+  name: gemini-scenario
 spec:
-  displayName: Gemini Scenario
+  inputs: []
+  applicationName: gemini-llm
