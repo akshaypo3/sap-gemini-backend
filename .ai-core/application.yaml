@@ -3,6 +3,11 @@ kind: Application
 metadata:
   name: gemini-llm
 spec:
-  template:
-    name: foundation-model
-    version: 1.0.0
+  services:
+    - name: llm-service
+      template:
+        name: foundation-model-v1
+        version: "1.0.0"
+      inputs:
+        parameters:
+          modelName: google/flan-t5-base
