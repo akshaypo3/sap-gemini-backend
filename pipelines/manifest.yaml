@@ -6,14 +6,27 @@ spec:
   executable:
     image: docker.io/akshay1p1/gemini-backend:latest
     command: ["python", "src/handler.py"]
-    env:
-      - name: LLM_ENDPOINT
-        valueFrom:
-          secretKeyRef:
-            name: genai-secret
-            key: endpoint
-      - name: LLM_AUTH_TOKEN
-        valueFrom:
-          secretKeyRef:
-            name: genai-secret
-            key: token
+    args: ["--prompt", "{{inputs.parameters.prompt}}"]
+  inputs:
+    parameters:
+      - name: prompt
+        type: string
+  outputs:
+    parameters:
+      - name: response
+        type: string
+  resources:
+    limits:
+      cpu: "1"
+      memory: "2Gi"
+  env:
+    - name: LLM_ENDPOINT
+      valueFrom:
+        secretKeyRef:
+          name: genai-secret
+          key: endpoint
+    - name: LLM_AUTH_TOKEN
+      valueFrom:
+        secretKeyRef:
+          name: genai-secret
+          key: token
