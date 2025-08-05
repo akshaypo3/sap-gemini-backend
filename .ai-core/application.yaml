@@ -9,6 +9,6 @@ spec:
         name: huggingface-text-gen
         version: "1.0.0"
       inputs:
-        image: "ghcr.io/sap-samples/huggingface-text-gen:latest"
+        image: ghcr.io/sap-samples/huggingface-text-gen:latest
         parameters:
-          model_id: "google/flan-t5-base"
+          model_id: google/flan-t5-base
