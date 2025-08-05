@@ -1,3 +1,9 @@
-name: genai-scenario
-description: "Scenario for GenAI"
-application: sap-gemini-backend
+apiVersion: ai.sap.com/v1alpha1
+kind: Scenario
+metadata:
+  name: gemini-scenario
+spec:
+  applicationName: gemini-llm
+  executions:
+    - name: gen-execution
+      executionTemplate: huggingface-text-gen

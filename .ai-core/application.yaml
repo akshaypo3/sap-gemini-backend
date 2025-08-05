@@ -1,2 +1,12 @@
-name: sap-gemini-backend
-description: "SAP Generative AI App using Joule model"
+apiVersion: ai.sap.com/v1alpha1
+kind: Application
+metadata:
+  name: gemini-llm
+spec:
+  services:
+    - name: llm-service
+      template: huggingface-text-gen
+      inputs:
+        image: huggingface/text-generation-inference:latest
+        parameters:
+          model_id: google/flan-t5-base
