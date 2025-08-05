@@ -3,5 +3,5 @@ kind: Scenario
 metadata:
   name: gemini-scenario
 spec:
-  inputs: []
   applicationName: geminiii
+  inputs: []
