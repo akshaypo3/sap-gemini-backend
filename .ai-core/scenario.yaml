@@ -4,8 +4,3 @@ metadata:
   name: gemini-scenario
 spec:
   applicationName: gemini-llm
-  executions:
-    - name: gen-execution
-      executionTemplate:
-        name: foundation-model-v1
-        version: "1.0.0"
