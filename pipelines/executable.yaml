@@ -3,10 +3,13 @@ kind: Executable
 metadata:
   name: gemini-backend-executable
   annotations:
-    scenarios.ai.sap.com/name: gemini-scenario
+    executables.ai.sap.com/description: "GenAI backend handler"
+    executables.ai.sap.com/name: "gemini-backend"
+  labels:
+    scenarios.ai.sap.com/id: gemini-scenario
 spec:
   image: docker.io/akshay1p1/gemini-backend:latest
   ports:
     - name: http1
       containerPort: 8080
-  protocol: v1
+  protocol: http
