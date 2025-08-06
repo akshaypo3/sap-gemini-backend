@@ -1,0 +1,11 @@
+apiVersion: ai.sap.com/v1alpha1
+kind: Executable
+metadata:
+  name: gemini-backend-executable
+  scenarioName: gemini-scenario
+spec:
+  image: "docker.io/akshay1p1/gemini-backend:latest"
+  ports:
+    - name: http1
+      containerPort: 8080
+  protocol: v1

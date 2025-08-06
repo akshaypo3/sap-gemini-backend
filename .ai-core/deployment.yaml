@@ -2,8 +2,7 @@ apiVersion: ai.sap.com/v1alpha1
 kind: Deployment
 metadata:
   name: gemini-deployment
-  annotations:
-    scenarios.ai.sap.com/id: "gemini-scenario"
+  scenarioName: gemini-scenario
 spec:
   executableId: gemini-backend-executable
   instanceCount: 1

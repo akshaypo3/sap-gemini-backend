@@ -1,7 +1,0 @@
-apiVersion: ai.sap.com/v1alpha1
-kind: Scenario
-metadata:
-  name: gemini-scenario
-  annotations:
-    scenarios.ai.sap.com/description: "Gemini scenario"
-    scenarios.ai.sap.com/name: "gemini-scenario"
